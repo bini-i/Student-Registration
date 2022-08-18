@@ -1,0 +1,8 @@
+<div id="<%= dom_id department %>">
+  <p class="my-5">
+    <% if action_name != "show" %>
+      <%= link_to "#{department.department_name if current_page?(controller: 'departments', action: 'index') }", department_students_path(department), class: "rounded-lg py-2 px-5 bg-blue-300 inline-block font-medium hover:text-blue-600 hover:bg-blue-100 hover:border-green-300" %>
+    <% end %>
+  </p>
+  <hr class="mt-6">
+</div>

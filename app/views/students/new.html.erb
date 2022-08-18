@@ -1,0 +1,7 @@
+<%= render layout: "students_layout" do %>
+  <div class="mx-auto md:w-2/3 w-full">
+    <h1 class="font-bold text-4xl">New student</h1>
+    <%= render "form", student: @student %>
+    <%= link_to 'Back to students', department_students_url, class: "rounded-lg py-1 px-4 bg-gray-100 inline-block font-medium mt-5 cursor-pointer" %>
+  </div>
+<% end %>

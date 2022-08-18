@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html class="h-full antialiased">
   <%= render "shared/head" %>
-
   <body class="font-sans font-normal leading-normal text-gray-800 bg-white flex flex-col min-h-screen ">
-
     <header>
       <%= render "shared/flash_notice" %>
       <%= render "shared/navbar" %>
     </header>
-
     <main class="flex-grow">
       <%= content_for?(:content) ? yield(:content) : yield %>
     </main>
   </body>
+  <!-- plugin for charts  -->
+  <script src="../assets/js/plugins/chartjs.min.js" async></script>
+  <!-- plugin for scrollbar  -->
+  <script src="../assets/js/plugins/perfect-scrollbar.min.js" async></script>
+  <!-- github button -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- main script file  -->
+  <%# <script src="../assets/js/soft-ui-dashboard-tailwind.js?v=1.0.3" async></script> %>
 </html>

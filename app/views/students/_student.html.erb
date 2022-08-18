@@ -1,0 +1,19 @@
+<tbody id="<%= dom_id student %>" class="overflow-x-auto relative shadow-md sm:rounded-lg">
+  <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+      <%= student.first_name %>
+    </th>
+    <td class="py-4 px-6">
+      <%= student.father_name %>
+    </td>
+    <td class="py-4 px-6">
+      <%= student.last_name %>
+    </td>
+    <td class="py-4 px-6">
+      <%= student.department.department_name %>
+    </td>
+    <td class="py-4 px-6 text-center">
+      <%= link_to "Edit", edit_department_student_path(@department, student), class: "font-medium text-blue-600 dark:text-blue-500 hover:underline" %>
+    </td>
+  </tr>
+</tbody>

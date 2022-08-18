@@ -59,6 +59,9 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+
+  gem "pry-rails"
+  gem "byebug"
 end
 
 group :test do
@@ -74,3 +77,5 @@ gem "name_of_person", "~> 1.1", ">= 1.1.1"
 gem "cssbundling-rails"
 gem "pay", "~> 3.0"
 gem "stripe", ">= 2.8", "< 6.0"
+
+gem "tailwindcss-rails", "~> 2.0"

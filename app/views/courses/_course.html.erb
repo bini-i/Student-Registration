@@ -1,0 +1,15 @@
+<div id="<%= dom_id course %>">
+  <p class="my-5">
+    <%# <strong class="block font-medium mb-1">Course name:</strong> %>
+    <%= course.course_name %>
+  </p>
+  <%# <p class="my-5">
+    <strong class="block font-medium mb-1">Department:</strong>
+    <%= course.department_id %>
+</p>
+<% if action_name != "show" %>
+  <%# <%= link_to "Show this course", department_course, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+  <%# <%= link_to 'Edit this course', edit_course_path(course), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+  <hr class="mt-6">
+<% end %>
+</div>

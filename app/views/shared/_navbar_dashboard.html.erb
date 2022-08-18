@@ -1,0 +1,52 @@
+<!-- Navbar -->
+<nav class="relative flex flex-wrap items-center justify-between px-0 py-2 mx-6 transition-all shadow-none duration-250 ease-soft-in rounded-2xl lg:flex-nowrap lg:justify-start" navbar-main navbar-scroll="true">
+  <div class="flex items-center justify-between w-full px-4 py-1 mx-auto flex-wrap-inherit">
+    <nav>
+      <!-- breadcrumb -->
+      <%# <h6 class="mb-0 font-bold capitalize">Dashboard</h6> %>
+    </nav>
+    <div class="flex items-center mt-2 grow sm:mt-0 sm:mr-6 md:mr-0 lg:flex lg:basis-auto">
+      <ul class="flex flex-row justify-start pl-0 mb-0 list-none md:w-full md-max:w-full md:pr-4">
+        <!-- online builder btn  -->
+        <li class="flex items-center mr-2">
+          <% if @department && @department.id %>
+            <strong class="bg-gradient-red px-3.6-em text-size-xs-em rounded-1.8 py-2.2-em inline-block whitespace-nowrap text-center align-baseline font-bold uppercase leading-none text-white"><%= @department.department_name  %></strong>
+          <% end %>
+        </li>
+        <li class="flex items-center mr-3">
+          <% if @department && @department.id %>
+            <%= link_to 'Students', department_students_path(@department) , class: "inline-block text-sm px-4 py-2 leading-none border rounded text-bluePostsCreationPolicy border-black hover:border-transparent hover:text-teal-500 hover:bg-gray mt-4 lg:mt-0"%>
+          <% end %>
+        </li>
+        <li class="flex items-center mr-3">
+          <% if @department && @department.id %>
+            <%= link_to 'Courses', department_courses_path(@department) , class: "inline-block text-sm px-4 py-2 leading-none border rounded text-blue border-black hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"%>
+          <% end %>
+        </li>
+        <li class="flex items-center">
+          <% if @department  %>
+            <%= link_to 'Back to Department', departments_path , class: "inline-block text-sm px-4 py-2 leading-none border rounded text-blue border-black hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"%>
+          <% end %>
+        </li>
+        <li class="flex items-center ml-auto">
+          <a class="inline-block px-8 py-2 mb-0 mr-4 font-bold text-center uppercase align-middle transition-all bg-transparent border border-solid rounded-lg shadow-none cursor-pointer leading-pro border-green-500 ease-soft-in text-size-xs hover:scale-102 active:shadow-soft-xs text-gray-500 hover:border-green-500 active:bg-green-500 active:hover:text-gray-500 hover:text-gray-500 tracking-tight-soft hover:bg-transparent hover:opacity-75 hover:shadow-none active:text-white active:hover:bg-transparent" href="users/edit"> <%= current_user.first_name %> <%= current_user.father_name %> </a>
+        </li>
+        <li class="flex items-center">
+          <%= button_to "Log out", destroy_user_session_path, method: :delete, class:"
+            block px-0 py-2 font-semibold transition-all ease-nav-brand text-size-sm text-slate-500" %>
+        </a>
+      </li>
+      <li class="flex items-center pl-4 xl:hidden">
+        <a href="javascript:;" class="block p-0 transition-all ease-nav-brand text-size-sm text-slate-500" sidenav-trigger>
+          <div class="w-4.5 overflow-hidden">
+            <i class="ease-soft mb-0.75 relative block h-0.5 rounded-sm bg-slate-500 transition-all"></i>
+            <i class="ease-soft mb-0.75 relative block h-0.5 rounded-sm bg-slate-500 transition-all"></i>
+            <i class="ease-soft relative block h-0.5 rounded-sm bg-slate-500 transition-all"></i>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+</nav>
+<!-- end Navbar -->
